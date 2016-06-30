@@ -1,4 +1,4 @@
-package com.example.rodri.workingwithtabs.fragment;
+package com.example.rodri.workingwithtabs.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
