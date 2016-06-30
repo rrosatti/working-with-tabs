@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Working With Tabs</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Fragments TextView -->
+    <string name="one">One</string>
 </resources>
