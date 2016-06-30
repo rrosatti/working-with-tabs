@@ -1,5 +1,6 @@
 package com.example.rodri.workingwithtabs.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.example.rodri.workingwithtabs.R;
 import com.example.rodri.workingwithtabs.adapter.ViewPagerAdapter;
@@ -19,33 +21,32 @@ import com.example.rodri.workingwithtabs.fragments.TwoFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
-    private TabLayout tabLayout;
-    private ViewPager viewPager;
+    private Button btSimpleTabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        /**Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
 
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
-        setupViewPager(viewPager);
+        initializeVariables();
 
-        tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        tabLayout.setupWithViewPager(viewPager);
+        btSimpleTabs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), SimpleTabsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new OneFragment(), "ONE");
-        viewPagerAdapter.addFragment(new TwoFragment(), "TWO");
-        viewPagerAdapter.addFragment(new ThreeFragment(), "THREE");
-        viewPager.setAdapter(viewPagerAdapter);
+    private void initializeVariables() {
+        btSimpleTabs = (Button) findViewById(R.id.btSimpleTabs);
     }
 
     @Override

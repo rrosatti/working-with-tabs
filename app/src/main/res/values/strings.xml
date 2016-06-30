@@ -2,6 +2,9 @@
     <string name="app_name">Working With Tabs</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Buttons -->
+    <string name="simple_tabs">Simple Tabs</string>
+
     <!-- Fragments TextView -->
     <string name="one">One</string>
     <string name="two">Two</string>
