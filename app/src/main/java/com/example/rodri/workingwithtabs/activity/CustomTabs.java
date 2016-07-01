@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.rodri.workingwithtabs.R;
@@ -66,7 +68,28 @@ public class CustomTabs extends AppCompatActivity {
     }
 
     private void setupTabIcons() {
-        TextView txtTabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        View view1 = (View) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        TextView txtTabOne = (TextView) view1.findViewById(R.id.txtCustomTab);
+        txtTabOne.setText("ONE");
+        ImageView imgOne = (ImageView) view1.findViewById(R.id.imgCustomIcon);
+        imgOne.setImageResource(tabIcons[0]);
+        tabLayout.getTabAt(0).setCustomView(view1);
+
+        View view2 = (View) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        TextView txtTabTwo = (TextView) view2.findViewById(R.id.txtCustomTab);
+        txtTabTwo.setText("TWO");
+        ImageView imgTwo = (ImageView) view2.findViewById(R.id.imgCustomIcon);
+        imgTwo.setImageResource(tabIcons[1]);
+        tabLayout.getTabAt(1).setCustomView(view2);
+
+        View view3 = (View) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
+        TextView txtTabThree = (TextView) view3.findViewById(R.id.txtCustomTab);
+        txtTabThree.setText("THREE");
+        ImageView imgThree = (ImageView) view3.findViewById(R.id.imgCustomIcon);
+        imgThree.setImageResource(tabIcons[2]);
+        tabLayout.getTabAt(2).setCustomView(view3);
+
+        /**TextView txtTabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         txtTabOne.setText("ONE");
         txtTabOne.setCompoundDrawablesWithIntrinsicBounds(0, tabIcons[0], 0, 0);
         tabLayout.getTabAt(0).setCustomView(txtTabOne);
@@ -79,7 +102,7 @@ public class CustomTabs extends AppCompatActivity {
         TextView txtTabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         txtTabThree.setText("THREE");
         txtTabThree.setCompoundDrawablesWithIntrinsicBounds(0, tabIcons[2], 0, 0);
-        tabLayout.getTabAt(2).setCustomView(txtTabThree);
+        tabLayout.getTabAt(2).setCustomView(txtTabThree);*/
     }
 
 }

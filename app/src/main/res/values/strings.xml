@@ -6,6 +6,7 @@
     <string name="simple_tabs">Simple Tabs</string>
     <string name="scrollable_tabs">Scrollable Tabs</string>
     <string name="icon_and_text_tabs">Icon and Text Tabs</string>
+    <string name="custom_tabs">Custom Tabs</string>
 
     <!-- Fragments TextView -->
     <string name="one">One</string>
