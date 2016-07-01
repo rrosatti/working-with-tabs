@@ -21,6 +21,10 @@
 
         <activity android:name=".activity.SimpleTabsActivity" />
 
+        <activity android:name=".activity.ScrollableTabsActivity" />
+
+        <activity android:name=".activity.IconAndTextTabsActivity" />
+
     </application>
 
 </manifest>

@@ -14,5 +14,24 @@
         android:text="@string/simple_tabs"
         android:textSize="16sp" />
 
+    <Button
+        android:id="@+id/btScrollableTabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btSimpleTabs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/scrollable_tabs"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btIconAndTextTabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btScrollableTabs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/icon_and_text_tabs"
+        android:textSize="16sp"/>
 
 </RelativeLayout>

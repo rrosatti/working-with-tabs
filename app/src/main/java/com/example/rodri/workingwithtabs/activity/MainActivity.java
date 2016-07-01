@@ -21,7 +21,7 @@ import com.example.rodri.workingwithtabs.fragments.TwoFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btSimpleTabs;
+    private Button btSimpleTabs, btScrollableTabs, btIconAndTextTabs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +43,28 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btScrollableTabs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ScrollableTabsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btIconAndTextTabs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), IconAndTextTabsActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initializeVariables() {
         btSimpleTabs = (Button) findViewById(R.id.btSimpleTabs);
+        btScrollableTabs = (Button) findViewById(R.id.btScrollableTabs);
+        btIconAndTextTabs = (Button) findViewById(R.id.btIconAndTextTabs);
     }
 
     @Override
