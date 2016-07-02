@@ -1,47 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary">
 
-    <Button
-        android:id="@+id/btSimpleTabs"
+  <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".activity.SimpleTabsActivity" />
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="@string/simple_tabs"
-        android:textSize="16sp" />
+        android:layout_centerInParent="true">
 
-    <Button
-        android:id="@+id/btScrollableTabs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btSimpleTabs"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/scrollable_tabs"
-        android:textSize="16sp" />
+      <Button
+          android:id="@+id/btSimpleTabs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentTop="true"
+          android:layout_centerHorizontal="true"
+          android:text="@string/simple_tabs"
+          android:textSize="16sp"
+          android:background="@drawable/custom_button"/>
 
-    <Button
-        android:id="@+id/btIconAndTextTabs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btScrollableTabs"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/icon_and_text_tabs"
-        android:textSize="16sp"/>
+      <Button
+          android:id="@+id/btScrollableTabs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btSimpleTabs"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp"
+          android:text="@string/scrollable_tabs"
+          android:textSize="16sp"
+          android:background="@drawable/custom_button"/>
 
-    <Button
-        android:id="@+id/btCustomTabs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btIconAndTextTabs"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/custom_tabs"
-        android:textSize="16sp" />
+      <Button
+          android:id="@+id/btIconAndTextTabs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btScrollableTabs"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp"
+          android:text="@string/icon_and_text_tabs"
+          android:textSize="16sp"
+          android:background="@drawable/custom_button"/>
+
+      <Button
+          android:id="@+id/btCustomTabs"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/btIconAndTextTabs"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="30dp"
+          android:text="@string/custom_tabs"
+          android:textSize="16sp"
+          android:background="@drawable/custom_button" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
